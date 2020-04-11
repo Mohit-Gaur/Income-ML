@@ -19,4 +19,5 @@ train_data, test_data, train_labels, test_labels = train_test_split(data, labels
 #print(income_data["native-country"].value_counts())
 forest = RandomForestClassifier(random_state = 1)
 forest.fit(train_data, train_labels)
+print(forest.feature_importances_) #shows list of numbers where each number corresponds to the relevance of a column of training data
 print(forest.score(test_data, test_labels))
